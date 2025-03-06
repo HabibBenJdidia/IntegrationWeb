@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taste Buds - Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'playfair': ['Playfair Display', 'serif'],
+            'sans': ['Inter', 'sans-serif'],
+          },
+          colors: {
+            'primary': '#A6E3D0',
+            'secondary': '#F98B8B',
+            'background': '#FDF6F0',
+          }
+        },
+      }
+    }
+  </script>
+</head>
+<body class="bg-background">
+  <!-- Header -->
+  <header class="bg-[#1E1E1E] py-4 fixed w-full top-0 z-50">
+    <nav class="container mx-auto px-4">
+      <div class="flex items-center justify-between">
+        <a href="/" class="flex items-center">
+          <img src="https://raw.githubusercontent.com/your-repo/taste-buds-logo.svg" alt="Taste Buds" class="h-12">
+        </a>
+        
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-white" id="mobile-menu-button">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+          </svg>
+        </button>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/" class="text-white hover:text-primary transition-colors">Home</a>
+          <a href="/about.html" class="text-white hover:text-primary transition-colors">About</a>
+          <a href="/dishes.html" class="text-white hover:text-primary transition-colors">Dishes</a>
+          <a href="/restaurant.html" class="text-white hover:text-primary transition-colors">Restaurant</a>
+          <a href="/contact.html" class="text-white hover:text-primary transition-colors">Contact</a>
+        </div>
+
+        <!-- Search and User Actions -->
+        <div class="hidden md:flex items-center space-x-4">
+          <div class="relative">
+            <input type="text" placeholder="Search" class="pl-4 pr-10 py-2 rounded-full bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary">
+            <button class="absolute right-3 top-1/2 transform -translate-y-1/2">
+              <img src="https://raw.githubusercontent.com/your-repo/search-icon.svg" alt="Search" class="w-5 h-5">
+            </button>
+          </div>
+          <a href="/cart.html" class="text-white hover:text-primary transition-colors">
+            <img src="https://raw.githubusercontent.com/your-repo/cart-icon.svg" alt="Cart" class="w-6 h-6">
+          </a>
+          <a href="/profile.html" class="text-white hover:text-primary transition-colors">
+            <img src="https://raw.githubusercontent.com/your-repo/profile-icon.svg" alt="Profile" class="w-8 h-8 rounded-full">
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="/" class="block px-3 py-2 text-white hover:text-primary transition-colors">Home</a>
+          <a href="/about.html" class="block px-3 py-2 text-white hover:text-primary transition-colors">About</a>
+          <a href="/dishes.html" class="block px-3 py-2 text-white hover:text-primary transition-colors">Dishes</a>
+          <a href="/restaurant.html" class="block px-3 py-2 text-white hover:text-primary transition-colors">Restaurant</a>
+          <a href="/contact.html" class="block px-3 py-2 text-white hover:text-primary transition-colors">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="bg-background py-16 md:py-24">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto">
+          <h1 class="text-4xl md:text-6xl font-playfair mb-6">Welcome to Taste Buds</h1>
+          <p class="text-lg md:text-xl text-gray-600 mb-8">Experience the finest dining with our carefully curated menu and exceptional service.</p>
+          <div class="flex flex-col md:flex-row justify-center gap-4">
+            <a href="/menu.html" class="bg-primary text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-colors">View Menu</a>
+            <a href="/book-table.html" class="bg-secondary text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-colors">Book a Table</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Dishes -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-playfair text-center mb-12">Featured Dishes</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Featured Dish 1 -->
+          <div class="bg-background rounded-lg overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591" alt="Deluxe Burger" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Deluxe Burger</h3>
+              <p class="text-gray-600 mb-4">Premium beef patty with special sauce</p>
+              <div class="flex justify-between items-center">
+                <span class="text-lg font-bold">$12.99</span>
+                <button class="bg-primary text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-colors">Order Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Add more featured dishes here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#1E1E1E] text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">TASTE BUDS</h3>
+          <p class="mb-2">Tunis, Ariana</p>
+          <p class="mb-2">Technopol Ghazela</p>
+          <p class="mb-2">Phone: +216 25 356 031</p>
+          <p>Email: tasteBuds@gustavo.tn</p>
+          <div class="flex space-x-4 mt-4">
+            <a href="#" class="hover:text-primary transition-colors">
+              <img src="https://raw.githubusercontent.com/your-repo/twitter-icon.svg" alt="Twitter" class="w-6 h-6">
+            </a>
+            <!-- Add more social media icons -->
+          </div>
+        </div>
+        
+        <!-- Add more footer sections -->
+      </div>
+      
+      <div class="mt-12 text-center border-t border-gray-700 pt-8">
+        <p>© Copyright TASTE BUDS All Rights Reserved</p>
+        <p>Designed by <a href="#" class="text-secondary hover:text-opacity-80 transition-colors">Gustavo-Group</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
